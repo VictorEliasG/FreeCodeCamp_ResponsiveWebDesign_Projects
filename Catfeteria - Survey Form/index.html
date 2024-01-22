@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATfeteria Survey Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Croissant+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://static.minne.com/profiles/34836356/large/9e22a6ba22f6530a4ab789286764c4598133fdac.png" alt="coffee icon">
+            <h1 id="title">CATfeteria</h1>
+            <p class="established">Est. 2023</p>
+        </div>
+            <p id="description">Thank you for taking the time to complete this survey.</p>
+        <hr>
+        <form action="" id="survey-form">
+            <fieldset>
+                <div class="form-div">
+                    <label class="customer-data" id="name-label" for="name">Name: </label>
+                    <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="form-div">
+                    <label class="customer-data" id="email-label" for="email">Email: </label>
+                    <input class="form-control" id="email" type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-div">
+                    <label class="customer-data" id="number-label" for="age">Age (13+): </label>
+                    <input class="form-control" id="number" name="age" type="number" min="13" max="120"  placeholder="Enter your age"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-div"><p class="question">Would you recommend CATfeteria to a friend?</p></div>
+                <div class="form-radio"><label for="customer-absolutely"><input class="recommend" id="customer-absolutely" type="radio" name="customer-recommend" value="Absolutely"/> Absolutely</label></div>
+                <div class="form-radio"><label for="customer-probably"><input class="recommend" id="customer-probably" type="radio" name="customer-recommend" value="Probably"/> Probably</label></div>
+                <div class="form-radio"><label for="customer-no"><input class="recommend" id="customer-recommend" type="radio" name="customer-recommend" value="not-sure"/> I prefer not to say</label></div>
+            </fieldset>
+            <fieldset>
+                <div class="form-div"><p class="question">What experiences did you enjoy?</p></div>
+                <div class="form-checkbox">
+                    <label for="recommendation1"><input class="inline" id="recommendation1" name="recommendation" type="checkbox" value="coffee" required />Coffee flavors and aromas</label>
+                    <label for="recommendation2"><input class="inline" id="recommendation2" name="recommendation" type="checkbox" value="cats" required />Petting and playing with cats</label>
+                    <label for="recommendation3"><input class="inline" id="recommendation3" name="recommendation" type="checkbox" value="timesharing" required />Enjoying time with family/friends</label>
+                    <label for="recommendation4"><input class="inline" id="recommendation4" name="recommendation" type="checkbox" value="read" required />Read books and magazines</label>
+                    <label for="recommendation4"><input class="inline" id="recommendation5" name="recommendation" type="checkbox" value="work" required />Spend time working/studying in workspaces</label>
+                </div>
+            </fieldset>
+            <fieldset>  
+                <div class="form-div"><p class="question">What is your favorite coffee?</p></div>
+                <label id="dropdown-level" for="dropdown">
+                    <div class="form-div">
+                        <select id="dropdown" name="dropdown">
+                            <option value="">(select one)</option>
+                            <option value="1">French Vanilla</option>
+                            <option value="2">Caramel Macchiato</option>
+                            <option value="3">Pumpkin Spice</option>
+                            <option value="4">Hazelnut</option>
+                            <option value="4">Mocha</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </div>
+                </label>
+            </fieldset>
+            <fieldset>
+                <div class="form-div">
+                    <p class="question">Do you have any comments or suggestions?</p>
+                        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+                    </div>
+            </fieldset>
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
